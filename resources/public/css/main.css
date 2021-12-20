@@ -1,0 +1,159 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin:0;
+    font-family: Calibri
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+
+    /*grid parent props*/
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 5fr;
+    grid-template-rows: 150px 1fr 100px;
+    row-gap: 25px;
+}
+.main-header{
+    box-shadow: 0 0 15px rgb(0 0 0 / 10%);
+
+    /*grid child props*/
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 1;
+
+    /*flex parent props*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-header h1 {
+    text-align: center
+}
+
+.main-header span {
+
+}
+
+.main-body-container{
+
+    /*grid child props*/
+    grid-column-start: span 2;
+    grid-row-start: 2;
+
+    /* flex parent props */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.main-body-padding {
+    flex-grow: 1;
+}
+
+.main-body-content {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 7px 7px 27px rgb(0 0 0 / 10%);
+    background-color: white;
+    max-width: 950px;
+
+    /*flex child props*/
+    flex-grow: 2;
+}
+
+.main-side-nav{
+    background-color: yellow;
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+.main-footer{
+
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 3;
+}
+
+section.article-item {
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 5px -2px rgb(0 0 0 / 3%);
+}
+
+section.article-item a,
+section.article-item a:visited,
+section.article-item a:hover,
+section.article-item a:active {
+    text-decoration: none;
+    color: inherit;
+}
+section.article-item:hover{
+    background-color: rgb(0 0 0 / 3%)
+}
+
+fieldset.article-form {
+    border:0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+fieldset.article-form div {
+    display: flex;
+    flex-direction: row;
+}
+
+fieldset.article-form div label {
+    order: 1;
+    flex: 3 3 30%;
+}
+
+fieldset.article-form div input,
+fieldset.article-form div textarea,
+fieldset.article-form div button,
+fieldset.article-form div submit {
+    order: 2;
+    flex: 10 10 70%;
+}
+
+fieldset.article-form div input,
+fieldset.article-form div textarea{
+    min-width: 150px;
+}
+
+fieldset.article-form div textarea {
+    height: 200px;
+}
+
+fieldset.article-form div input[type=submit],
+fieldset.article-form div button,
+fieldset.article-form div submit {
+    flex: 0 0 auto;
+    margin-left: auto;
+    padding: 2px 16px;
+}
+
+div.new-link{
+    display:flex;
+}
+
+div.new-link a{
+    margin-left: auto;
+}
+
+section.article-view div {
+    display: flex;
+    flex-orientation: row;
+    flex-wrap: nowrap
+}
+
+section.article-view div a{
+    margin-left: auto;
+}
